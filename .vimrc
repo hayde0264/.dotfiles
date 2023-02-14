@@ -50,7 +50,7 @@ let g:cmake_link_compile_commands = 1
 let g:sneak#label = 1
 
 " theme                           
-if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co !  = 256
+if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 256
   finish
 endif
 colorscheme gruvbox
