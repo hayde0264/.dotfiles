@@ -31,7 +31,7 @@ nnoremap <leader>da dG
 set nocompatible
 set autoindent
 set smartindent
-set backgournd=dark
+set background=dark 
   
 
 " ale - linter settings
