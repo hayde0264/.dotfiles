@@ -5,31 +5,34 @@ Plug 'vim-airline/vim-airline'
 Plug 'dense-analysis/ale'
 Plug 'cdelledonne/vim-cmake'
 Plug 'justinmk/vim-sneak'
+Plug 'flazz/vim-colorschemes'
 call plug#end()
-
+  
 " PERSONALS VIM
 " personal key combinations
 let mapleader = "/"
-
+  
 " enter normal mode
 inoremap jf <esc>
-
+  
 " check out Nerd Tree
 nnoremap <leader>nt NERDTree
-
+  
 " jump to the begging of the line
 nnoremap <leader>b 0
-
+  
 " jump to the end of the line
 nnoremap <leader>e $
-
+  
 " delete from current position to end of file
 nnoremap <leader>da dG
-
+  
 " General
 set nocompatible
 set autoindent
 set smartindent
+set backgournd=dark
+  
 
 " ale - linter settings
 let g:ale_fixers = {
@@ -46,6 +49,11 @@ let g:cmake_link_compile_commands = 1
 " sneak
 let g:sneak#label = 1
 
+" theme                           
+if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co !  = 256
+  finish
+endif
+colorscheme gruvbox
 
 "COC.NVIM
 " May need for vim (not neovim) since coc.nvim calculate byte offset by count
