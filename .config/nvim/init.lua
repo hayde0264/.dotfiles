@@ -1,5 +1,3 @@
 require('packages') 
-require('keybindings')  
-require('theme')
-
-
+require('keybindings')
+require('lsp') 
