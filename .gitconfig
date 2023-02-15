@@ -1,0 +1,23 @@
+[user]
+	name = hayde
+	email = hayde0264@gmail.com
+[alias]
+	co = checkout
+	cot = "!f() { git branch | grep $1 | xargs -I {} git co {}; }; f"
+        b = branch
+        pu = push -u origin HEAD
+        ci = commit
+        st = status
+        ap = add --patch
+        rename = branch -m
+	rn = rename
+	clean-merged = ! git branch --merged | egrep -v \"(^\\*|master|dev)\" | xargs git branch -d
+	age = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+	rc = rebase --continue
+        rs = rebase --skip
+        cc = cherry-pick --continue
+        cs = cherry-pick --skip
+[core]
+        editor = vim
+[push]
+	default = simple
