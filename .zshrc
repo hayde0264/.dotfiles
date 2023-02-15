@@ -17,4 +17,3 @@ alias gaa="git add --all"
 alias gc="git commit"
 alias gpull="git pull"
 alias gpush="git push"
-alias g++='g++ --std=c++17'
