@@ -1,0 +1,14 @@
+ve_config_reload: true
+
+window:
+  padding:
+    x: 15
+    y: 15
+  dynamic_padding: false
+  decorations: buttonless
+
+font:
+  normal:
+    family: "SFMono Nerd Font"
+    style: Regular
+  size: 15.0
