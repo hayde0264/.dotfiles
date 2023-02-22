@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/Users/hayde/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/hayde/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/hayde/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -103,6 +108,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/hayde/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/hayde/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
