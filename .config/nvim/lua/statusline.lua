@@ -1,3 +1,12 @@
+local colors = {
+  purple   = '#8A2BE2',
+  cyan   = '#99dac8',
+  black  = '#080808',
+  white  = '#FFFFFF',
+  red    = '#ff5189',
+  violet = '#d183e8',
+  green = '#00FA9A' 
+}
 
 local bubbles_theme = {
   normal = {
