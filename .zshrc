@@ -1,5 +1,7 @@
 PROMPT='%n~$'
 
+eval "$(starship init zsh)"
+
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="/Users/hayde/.local/bin:$PATH"
 export JAVA_HOME=$(/usr/libexec/java_home)
