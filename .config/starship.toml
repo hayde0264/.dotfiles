@@ -14,11 +14,3 @@ staged = '[++\($count\)](green)'
 renamed = '👅'
 deleted = '🗑'
 
-[[battery.display]]
-threshold = 100
-style = "bold green"
-
-[os]
-format = "🍎"
-style = "bold blue"
-disabled = false
