@@ -1,6 +1,9 @@
 PROMPT='%n~$'
 
 eval "$(starship init zsh)"
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
 
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="/Users/hayde/.local/bin:$PATH"
