@@ -13,7 +13,7 @@ export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.1.0/bin:$PATH"
 
-alias vim="neovim" 
+alias vim="nvim" 
 alias py="python3"
 alias post="psql postgres"
 alias post-stop="brew services stop postgresql@14"
