@@ -1,59 +1,45 @@
-call plug#begin()
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'dense-analysis/ale'
-Plug 'cdelledonne/vim-cmake'
-Plug 'justinmk/vim-sneak'
-Plug 'flazz/vim-colorschemes'
-call plug#end()
+  call plug#begin()
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'preservim/nerdtree'
+  Plug 'vim-airline/vim-airline'
+  Plug 'dense-analysis/ale'
+  Plug 'cdelledonne/vim-cmake'
+  Plug 'justinmk/vim-sneak'
+  call plug#end()
   
-" PERSONALS VIM
-" personal key combinations
-let mapleader = "/"
+  " PERSONALS VIM
+  " personal key combinations
+  let mapleader = "/"
   
-" enter normal mode
-inoremap jf <esc>
+  " enter normal mode
+  inoremap jf <esc>
   
-" check out Nerd Tree
-nnoremap <leader>nt NERDTree
+  " check out Nerd Tree
+  nnoremap <leader>nt NERDTree
   
-" jump to the begging of the line
-nnoremap <leader>b 0
+  " jump to the begging of the line
+  nnoremap <leader>b 0
   
-" jump to the end of the line
-nnoremap <leader>e $
+  " jump to the end of the line
+  nnoremap <leader>e $
   
-" delete from current position to end of file
-nnoremap <leader>da dG
+  " delete from current position to end of file
+  nnoremap <leader>da dG
   
-" General
-set nocompatible
-set autoindent
-set smartindent
-set background=dark 
+  " General
+  set nocompatible
+  set autoindent
+  set smartindent
+  colorscheme darkblue
   
-
-" ale - linter settings
-let g:ale_fixers = {
-    \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-    \}
-let g:ale_fix_on_save = 1
-let g:ale_sign_column_always = 1
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
-
-" cmake
-let g:cmake_link_compile_commands = 1
-
-" sneak
-let g:sneak#label = 1
-
-" theme                           
-if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 256
-  finish
-endif
-colorscheme gruvbox
+  " ale - linter settings
+  let g:ale_fixers = {
+      \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \}
+  let g:ale_fix_on_save = 1
+  let g:ale_sign_column_always = 1
+  let g:ale_sign_error = '>>'
+  let g:ale_sign_warning = '--'
 
 "COC.NVIM
 " May need for vim (not neovim) since coc.nvim calculate byte offset by count
