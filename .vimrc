@@ -25,13 +25,18 @@ nnoremap <leader>e $
   
 " delete from current position to end of file
 nnoremap <leader>da dG
-  
-" General
-set nocompatible
+ 
+ " General 
+set tabstop=4
+set shiftwidth=4
+set hidden
+filetype indent on
+filetype plugin on
 set autoindent
+set nocompatible
 set smartindent
 colorscheme darkblue
-  
+ 
 " ale - linter settings
  let g:ale_fixers = {
       \   '*': ['remove_trailing_lines', 'trim_whitespace'],
