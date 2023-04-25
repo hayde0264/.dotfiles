@@ -27,14 +27,23 @@ nnoremap <leader>e $
 nnoremap <leader>da dG
  
  " General 
-set tabstop=4
-set shiftwidth=4
-set hidden
-filetype indent on
-filetype plugin on
-set autoindent
+set expandtab                   
+set autoindent smartindent     
+set copyindent                  
+set softtabstop=2               
+set tabstop=2                   
+set shiftwidth=2                
+set smarttab                   
+set hidden 
 set nocompatible
-set smartindent
+set nobackup
+set nowritebackup
+set noswapfile 
+filetype indent on
+filetype plugin on 
+filetype on
+filetype plugin on
+filetype plugin indent on
 colorscheme darkblue
  
 " ale - linter settings
