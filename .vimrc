@@ -2,31 +2,33 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
-Plug 'dense-analysis/ale'
-Plug 'cdelledonne/vim-cmake'
-Plug 'justinmk/vim-sneak'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  
+Plug 'ryanoasis/vim-devicons'   
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 call plug#end()
-  
+
 " PERSONALS VIM
 " personal key combinations
 let mapleader = "/"
-  
+
 " enter normal mode
 inoremap jf <esc>
-  
+
 " check out Nerd Tree
 nnoremap <leader>nt NERDTree
-  
+
 " jump to the begging of the line
 nnoremap <leader>b 0
-  
+
 " jump to the end of the line
 nnoremap <leader>e $
-  
+
 " delete from current position to end of file
 nnoremap <leader>da dG
- 
- " General 
+
+" General    
+set encoding=UTF-8
 set expandtab                   
 set autoindent smartindent     
 set copyindent                  
@@ -38,14 +40,24 @@ set hidden
 set nocompatible
 set nobackup
 set nowritebackup
-set noswapfile 
+set noswapfile  
+set nu
 filetype indent on
 filetype plugin on 
 filetype on
 filetype plugin on
 filetype plugin indent on
 colorscheme darkblue
- 
+
+# Vim Icons  
+set guifont=hack_nerd_font:h15 
+let g:webdevicons_enable = 1 
+let g:webdevicons_enable_nerdtree = 1 
+let g:webdevicons_enable_airline_tabline = 1 
+let g:WebDevIconsOS = 'Darwin' 
+let g:NERDTreeFileExtensionHighlightFullName = 1 
+let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
+let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 " ale - linter settings
  let g:ale_fixers = {
       \   '*': ['remove_trailing_lines', 'trim_whitespace'],
