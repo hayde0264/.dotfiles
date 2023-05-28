@@ -58,6 +58,7 @@ let g:WebDevIconsOS = 'Darwin'
 let g:NERDTreeFileExtensionHighlightFullName = 1 
 let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
 let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
+
 " ale - linter settings
  let g:ale_fixers = {
       \   '*': ['remove_trailing_lines', 'trim_whitespace'],
