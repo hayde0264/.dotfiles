@@ -6,6 +6,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  
 Plug 'ryanoasis/vim-devicons'   
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 " PERSONALS VIM
@@ -59,6 +60,10 @@ let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
 let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
 
+" ALE   
+let g:airline#extensions#ale#enabled = 1  
+let g:ale_disable_lsp = 1  
+let g:ale_virtualtext_cursor = 'current'
 
 "COC.NVIM
 " May need for vim (not neovim) since coc.nvim calculate byte offset by count
