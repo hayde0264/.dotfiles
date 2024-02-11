@@ -17,6 +17,7 @@ set tabstop=2
 set shiftwidth=2                
 set smarttab                   
 set hidden 
+set nu
 set nocompatible
 set nobackup
 set nowritebackup
@@ -35,6 +36,7 @@ let g:airline_theme = 'light'
 let g:airline_section_z = '%{strftime("%c")}'
 
 "Code formatting 
+" C++/C
 function FormatBuffer()
   if &modified && !empty(findfile('.clang-format', expand('%:p:h') . ';'))
     let cursor_pos = getpos('.')
@@ -44,6 +46,10 @@ function FormatBuffer()
 endfunction
 
 autocmd BufWritePre *.h,*.hpp,*.c,*.cpp,*.vert,*.frag :call FormatBuffer()
+
+" JSON
+autocmd FileType json autocmd BufWritePre <buffer> %!python3 -m json.tool
+
 
 
 "COC.NVIM
