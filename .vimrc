@@ -1,31 +1,11 @@
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
-Plug 'tpope/vim-fugitive'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  
-Plug 'ryanoasis/vim-devicons'   
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
-
-" PERSONALS VIM
-" personal key combinations
-let mapleader = "/"
 
 " enter normal mode
 inoremap jf <esc>
-
-" check out Nerd Tree
-nnoremap <leader>nt NERDTree
-
-" jump to the begging of the line
-nnoremap <leader>b 0
-
-" jump to the end of the line
-nnoremap <leader>e $
-
-" delete from current position to end of file
-nnoremap <leader>da dG
 
 " General    
 set encoding=UTF-8
@@ -41,23 +21,19 @@ set nocompatible
 set nobackup
 set nowritebackup
 set noswapfile  
-set nu
 filetype indent on
 filetype plugin on 
 filetype on
 filetype plugin on
 filetype plugin indent on
+
+" Colorscheme
 colorscheme darkblue
 
-" Vim Icons  
-set guifont=hack_nerd_font:h15 
-let g:webdevicons_enable = 1 
-let g:webdevicons_enable_nerdtree = 1 
-let g:webdevicons_enable_airline_tabline = 1 
-let g:WebDevIconsOS = 'Darwin' 
-let g:NERDTreeFileExtensionHighlightFullName = 1 
-let g:WebDevIconsDisableDefaultFolderSymbolColorFromNERDTreeDir = 1
-let g:WebDevIconsDisableDefaultFileSymbolColorFromNERDTreeFile = 1
+"Airline theme 
+let g:airline_theme = 'light'
+let g:airline_section_z = '%{strftime("%c")}'
+
 
 "COC.NVIM
 " May need for vim (not neovim) since coc.nvim calculate byte offset by count
@@ -212,4 +188,5 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>jf:w
+
