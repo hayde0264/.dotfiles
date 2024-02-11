@@ -34,6 +34,17 @@ colorscheme darkblue
 let g:airline_theme = 'light'
 let g:airline_section_z = '%{strftime("%c")}'
 
+"Code formatting 
+function FormatBuffer()
+  if &modified && !empty(findfile('.clang-format', expand('%:p:h') . ';'))
+    let cursor_pos = getpos('.')
+    :%!clang-format
+    call setpos('.', cursor_pos)
+  endif
+endfunction
+
+autocmd BufWritePre *.h,*.hpp,*.c,*.cpp,*.vert,*.frag :call FormatBuffer()
+
 
 "COC.NVIM
 " May need for vim (not neovim) since coc.nvim calculate byte offset by count
