@@ -13,6 +13,7 @@ alias c++="g++ -std=c++17"
 alias c="gcc -std=c99" 
 alias serve="php -S localhost:8080" 
 alias google="clang-format -i --style=google" 
+alias v="iverilog"
 
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="/Users/hayde/.local/bin:$PATH"
